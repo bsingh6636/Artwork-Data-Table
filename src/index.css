@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Overall Dark Theme Styles */
+body {
+  @apply bg-gray-900 text-white;
+}
+
+/* Table Scaling and Hover Row Effects */
+.data-table {
+  @apply scale-105; /* Always scaled at 105% */
+}
+
+.data-table .p-datatable-tbody > tr {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.data-table .p-datatable-tbody > tr:hover {
+  @apply bg-blue-500 text-white; /* Background turns blue, text turns white for visibility */
+}
+
+.data-table .p-datatable-header, 
+.data-table .p-datatable-thead > tr > th {
+  @apply bg-gray-700 text-gray-300;
+}
+
+.data-table .p-datatable-tbody > tr > td {
+  @apply border-gray-700;
+}
+
+/* Overlay Panel Custom Styles */
+.custom-overlay-panel {
+  @apply bg-gray-800 shadow-lg rounded-md;
+  border: 1px solid #3b82f6; /* Blue border for a modern touch */
+}
+
+/* "Select Rows" Element */
+.cursor-pointer {
+  @apply p-1 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 hover:scale-110 transition-all;
+}
+
+.cursor-pointer:hover {
+  @apply text-white;
+}
+
+/* Input and Button Styling */
+input[type="number"] {
+  @apply bg-gray-700 text-white p-2 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none;
+}
+
+button {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-bold p-2 rounded-md transition-all;
+}
+
+/* Spinner */
+.p-progress-spinner {
+  @apply text-blue-500; /* Blue spinner for the dark theme */
+}
