@@ -6,7 +6,7 @@ interface OverlayPaneelProps {
   onRowSelectionChange: (numRows: number) => void;
 }
 
-export default function OverlayPaneel({ onRowSelectionChange }: OverlayPaneelProps) {
+const OverlayPaneel: React.FC<OverlayPaneelProps> = ({ onRowSelectionChange }) => {
   const op = useRef<OverlayPanel>(null);
   const [rowCount, setRowCount] = useState<number | undefined>(undefined);
 
@@ -39,4 +39,6 @@ export default function OverlayPaneel({ onRowSelectionChange }: OverlayPaneelPro
       </OverlayPanel>
     </div>
   );
-}
+};
+
+export default OverlayPaneel;
